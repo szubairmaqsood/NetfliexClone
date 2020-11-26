@@ -1,7 +1,9 @@
+
 :root{
     --primary-color:#e50914;
     --dark-color:#141414;
 }
+
 
 /* Universal Identifier     */
 *{
@@ -52,13 +54,31 @@ box-shadow: 0px 1px  rgb(0,0,0,0.45);
 }
 .btn-lg
 {
-    padding:10px;
+    padding:5px;
 }
 
 .btn:hover
 {
     opacity: 0.9;
 }
+
+/**********************Hide Content Initially***********************/
+
+#tab-content-3,
+#tab-content-2,
+#tab-content-1
+
+ {
+    display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+
+@media(min-width:700px)
+{
 
 /*Show Case */
 .ShowCase
@@ -134,7 +154,6 @@ line-height: 1.1em;
 font-size: 4rem;
 height: 2.2em;
 width: 80%;
-
 }
 
 .ShowCase-content p
@@ -149,7 +168,6 @@ margin-bottom: 10px;
 {
     padding-left: 10%;
     margin-bottom: 20px;
-    
 }
 
 .ShowCase_ContentForm
@@ -210,12 +228,16 @@ margin-bottom: 10px;
 .tabs .container
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     grid-gap:1rem;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: #e50914;
 }
+
+
+
 
 #tab-content-1 .tab-1-container-inner
 {
@@ -240,11 +262,12 @@ margin-bottom: 10px;
 {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: #e50914;
   
 }
 
@@ -264,6 +287,7 @@ margin-bottom: 10px;
     align-items: center;
   
 }
+
 
 .table
 {
@@ -376,5 +400,115 @@ margin-bottom: 10px;
     font-size: 2rem;
     border-radius: 0;
    text-transform: uppercase;
+}
+
+
+    
+    .ShowCase-content h1
+   {
+    line-height: 0.5em;
+    font-size: 0.3rem;
+    height: 1.5em;
+    width: 100%;
+   }
+
+   .ShowCase-content p
+   {   
+
+     font-size: 0.8rem;
+     margin-bottom: 3px;
+     
+    }
+    .ShowCase-content-Text
+    {
+      padding-left: 0%;
+      padding-right: 0%;
+    };
+    .ShowCase-content-Text h1
+{
+    padding-left: 0%;
+}
+
+    .btn-xl
+  {
+    padding-top :8.8px;
+    padding-bottom: 8.8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: Left;
+    font-size: 1rem;
+    border-radius: 0;
+   text-transform: uppercase;
+  }
+
+  .table thead  th
+{
+    text-transform: uppercase;
+    padding:0.2rem 0.1rem;
+    
+}
+
+.table tbody  td
+{
+    color:#999;
+    padding:0.2rem 0.2rem;
+    text-align: center;
+}
+
+.tab-Content
+{
+    padding:0rem;
+}
+
+}
+
+@media(max-width:699px)
+{
+#tab-content-2 .tab-2-content-top , #tab-content-2 .tab-2-content-bottom,.tab-3-content-top
+{
+   
+    grid-template-columns: 1fr;
+  
+  
+  
+}
+
+/*Show Case */
+.ShowCase
+{
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('../Img/background.jpg') no-repeat center center/cover;
+    
+}
+#tab-content-1 .tab-1-container-inner
+{
+    grid-template-columns: 100%;
+    text-align: left;
+    align-items: left;;
+}
+
+#tab-content-1 .tab-1-container-inner a
+{
+   font-size: 1rem;
+   width: 100%;
+}
+
+
+.ShowCase::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0.5;
+    background:rgb(0,0,0,0.6);
+    box-shadow: inset 1px 1px 2px #ffffff;
+    
+}
+
 }
 
